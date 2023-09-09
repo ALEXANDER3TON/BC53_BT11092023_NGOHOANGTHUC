@@ -16,17 +16,18 @@ function nhanvien(
   this.basicSalary = _basicSalary;
   this.regency = _regency;
   this.workHour = _workHour;
+  
 
   // method
 
   this.totalSalary = function () {
     var salary = 0;
     if (this.regency === "Sếp") {
-      salary = this.basicSalary * 3 * this.workHour;
+      salary = this.basicSalary * 3;
     } else if (this.regency === "Trưởng phòng") {
-      salary = this.basicSalary * 2 * this.workHour;
+      salary = this.basicSalary * 2;
     } else {
-      salary = this.basicSalary * this.workHour;
+      salary = this.basicSalary;
     }
 
     return salary.toLocaleString('vi', {style : 'currency', currency : 'VND'});

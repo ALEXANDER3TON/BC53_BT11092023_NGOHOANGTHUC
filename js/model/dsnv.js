@@ -23,15 +23,19 @@ function DSNV() {
         if(index !== -1){
             var nv = this.employ[index];
             return nv;
-        }
-    }
+        };
+    };
 
     this._update = function(nhanVien) {
         var index = dsnv._find(nhanVien.account);
-        if(index !== -1){
-            this.employ[index] = nhanVien;
-        }
-    }
+        for(var index = 0; index < this.employ.length; index++){
+            if(index !== -1){
+                this.employ[index] = nhanVien;
+            };
+        };
+        
+        return nhanVien;
+    };
 
     this._delete = function(account) {
         var index = dsnv._find(account);
@@ -44,13 +48,7 @@ function DSNV() {
         console.log("this.employ",this.employ);
     }
 
-    this._access = function(nhanVien) {
-        var index = dsnv._find(nhanVien.rank)
-        if(index !== -1){
-            var nv = this.employ[index];
-            return nv;
-        }
-    }
+    
 
 }
 
