@@ -69,14 +69,7 @@ getEle("#btnDong").onclick = function () {
 getEle("#btnThem").onclick = function () {
   resetForm();
 };
-// function showAndHide(){
-//   var x = getEle("#myModal");
-//   if(x.style.display === "none"){
-//     x.style.display = "block"
-//   } else {
-//     x.style.display = "none"
-//   }
-// }
+
 function renderTable(arrList) {
   var htmlString = "";
   for (var i = 0; i < arrList.length; i++) {
@@ -159,7 +152,6 @@ getEle("#btnThemNV").onclick = function addEmploy() {
     resetForm();
   }
 
-  // showAndHide()
 };
 
 function editEmploy(account) {
@@ -228,7 +220,7 @@ getEle("#btnCapNhat").onclick = function updateEmploy() {
     renderTable(dsnv.employ);
     resetForm();
   }
-  // showAndHide()
+  
 };
 
 
