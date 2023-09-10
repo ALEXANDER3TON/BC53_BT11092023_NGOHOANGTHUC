@@ -69,7 +69,14 @@ getEle("#btnDong").onclick = function () {
 getEle("#btnThem").onclick = function () {
   resetForm();
 };
-
+// function showAndHide(){
+//   var x = getEle("#myModal");
+//   if(x.style.display === "none"){
+//     x.style.display = "block"
+//   } else {
+//     x.style.display = "none"
+//   }
+// }
 function renderTable(arrList) {
   var htmlString = "";
   for (var i = 0; i < arrList.length; i++) {
@@ -103,7 +110,7 @@ getEle("#btnThemNV").onclick = function addEmploy() {
   var valid =
     checkEmpty(nv.account, "#tbTKNV", "Tài khoản không được để trống!") &&
     checkNumber(nv.account, "#tbTKNV", "Mã nhân viên chỉ bao gồm ký tự số!") &&
-    checkAcount(nv.account, 4, 6, "#tbTKNV", "Mã Nhân viên bao gồm 6 ký tự!") &&
+    checkAcount(nv.account, 4, 6, "#tbTKNV", "Mã Nhân viên bao gồm 4-6 ký tự!") &&
     checkDuplicate(nv.account, dsnv.employ, "#tbTKNV", "Tài Khoản đã tồn tại!");
 
   valid &=
@@ -151,6 +158,8 @@ getEle("#btnThemNV").onclick = function addEmploy() {
     renderTable(dsnv.employ);
     resetForm();
   }
+
+  // showAndHide()
 };
 
 function editEmploy(account) {
@@ -167,6 +176,8 @@ function editEmploy(account) {
     getEle("#chucvu").value = nv.regency;
     getEle("#gioLam").value = nv.workHour;
   }
+
+  getEle("#btnThemNV").style.visibility = 'hidden';
 }
 
 getEle("#btnCapNhat").onclick = function updateEmploy() {
@@ -217,6 +228,7 @@ getEle("#btnCapNhat").onclick = function updateEmploy() {
     renderTable(dsnv.employ);
     resetForm();
   }
+  // showAndHide()
 };
 
 
