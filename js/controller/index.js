@@ -134,7 +134,7 @@ getEle("#btnThemNV").onclick = function addEmploy() {
       1000000,
       20000000,
       "#tbLuongCB",
-      "Mức lương không nằm trong chính sách"
+      "Mức lương không nằm trong chính sách (từ 1.000.000 - 20.000.000)"
     );
 
   valid &= checkOption(nv.regency, "#tbChucVu", "Vui lòng chọn chức vụ");
@@ -142,7 +142,7 @@ getEle("#btnThemNV").onclick = function addEmploy() {
   valid &=
     checkNumber(nv.workHour, "#tbGiolam", "Vui lòng nhập số giờ làm!") &&
     checkEmptyNum(nv.workHour, "#tbGiolam", "Vui lòng nhập số giờ làm!") &&
-    checkLimit(nv.workHour, 80, 200, "#tbGiolam", "Số giờ làm không hợp lệ");
+    checkLimit(nv.workHour, 80, 200, "#tbGiolam", "Số giờ làm không hợp lệ (từ 80 - 200 giờ)");
 
   if (valid) {
     dsnv._addEmploy(nv);
