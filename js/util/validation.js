@@ -45,8 +45,6 @@ function checkDuplicate(value, ds, idErr, message) {
     return nv.account == value;
   });
 
-  console.log("index", index);
-
   if (index != -1) {
     getEle(idErr).innerHTML = message;
     getEle(idErr).style.display = "block";
