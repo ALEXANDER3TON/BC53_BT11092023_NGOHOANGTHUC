@@ -68,6 +68,7 @@ getEle("#btnDong").onclick = function () {
 };
 getEle("#btnThem").onclick = function () {
   resetForm();
+  getEle("#btnThemNV").style.display = 'block';
 };
 
 function renderTable(arrList) {
@@ -169,7 +170,7 @@ function editEmploy(account) {
     getEle("#gioLam").value = nv.workHour;
   }
 
-  getEle("#btnThemNV").style.visibility = 'hidden';
+  getEle("#btnThemNV").style.display = 'none';
 }
 
 getEle("#btnCapNhat").onclick = function updateEmploy() {
